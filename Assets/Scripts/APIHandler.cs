@@ -2,56 +2,79 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
-[System.Serializable]
-public class StoryData
-{
-    public string _id;
-    public string title;
-    public string author;
-    public string story;
-    public string moral;
-}
-
 public class APIHandler : MonoBehaviour
 {
-    private string apiUrl = "https://shortstories-api.onrender.com/";
-
-    private string storyId;
     private string storyTitle;
     private string storyAuthor;
     private string storyContent;
     private string storyMoral;
 
-    public void FetchStory()
+    private bool storyReady = false;
+
+    private const string apiURL = "https://shortstories-api.onrender.com/";
+
+    public void RequestStory()
     {
-        StartCoroutine(GetStory());
+        storyReady = false;
+        StartCoroutine(FetchStoryCoroutine());
     }
 
-    private IEnumerator GetStory()
+    private IEnumerator FetchStoryCoroutine()
     {
-        UnityWebRequest request = UnityWebRequest.Get(apiUrl);
+        UnityWebRequest request = UnityWebRequest.Get(apiURL);
         yield return request.SendWebRequest();
 
-        if (request.result != UnityWebRequest.Result.Success)
+        if (request.result == UnityWebRequest.Result.ConnectionError ||
+            request.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.LogError("Failed to fetch story: " + request.error);
+            Debug.LogError("API Error: " + request.error);
+            storyTitle = "Error in Getting the story.";
+            storyContent = "There's something wrong with the server";
         }
         else
         {
-            StoryData data = JsonUtility.FromJson<StoryData>(request.downloadHandler.text);
-
-            storyId      = data._id;
-            storyTitle   = data.title;
-            storyAuthor  = data.author;
+            string json = request.downloadHandler.text;
+            SimpleStoryData data = JsonUtility.FromJson<SimpleStoryData>(json);
+            storyTitle = data.title;
+            storyAuthor = data.author;
             storyContent = data.story;
-            storyMoral   = data.moral;
-
-            Debug.Log("Story fetched successfully!");
+            storyMoral = data.moral;
         }
+
+        storyReady = true;
     }
 
-    public string GetTitle()   => storyTitle;
-    public string GetAuthor()  => storyAuthor;
-    public string GetContent()   => storyContent;
-    public string GetMoral()   => storyMoral;
+    public bool IsStoryReady()
+    {
+        return storyReady;
+    }
+
+    public string GetTitle()
+    {
+        return storyTitle;
+    }
+
+    public string GetAuthor()
+    {
+        return storyAuthor;
+    }
+
+    public string GetContent()
+    {
+        return storyContent;
+    }
+
+    public string GetMoral()
+    {
+        return storyMoral;
+    }
+
+    [System.Serializable]
+    private class SimpleStoryData
+    {
+        public string title;
+        public string author;
+        public string story;
+        public string moral;
+    }
 }
