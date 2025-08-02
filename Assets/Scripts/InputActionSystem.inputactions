@@ -1,0 +1,82 @@
+{
+    "name": "InputActionSystem",
+    "maps": [
+        {
+            "name": "Child",
+            "id": "ceacacf9-6d79-42a5-adcf-c3b3961da921",
+            "actions": [
+                {
+                    "name": "ClickMove",
+                    "type": "Value",
+                    "id": "f9bcd4df-e411-4e6b-91b4-bb305aeb340e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "4b1c21fa-75e7-408a-8e33-cf7970317668",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "835ee71c-9aff-4819-ae7c-b3c76a63e6e3",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3069e205-585f-4499-b2dd-49d052e00091",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Controls",
+            "id": "7f0b1131-fbb2-46f5-aecc-49a828a5d513",
+            "actions": [
+                {
+                    "name": "ExitGame",
+                    "type": "Button",
+                    "id": "8668a55a-5d4f-4f3e-a417-b6aa073c3c49",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "eef52ccb-e2de-4a1b-a8e2-e680bda30174",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ExitGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
