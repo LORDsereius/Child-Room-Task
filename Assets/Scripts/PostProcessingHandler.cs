@@ -23,7 +23,6 @@ public class PostProcessingHandler : MonoBehaviour
     }
     public void shiftToSad()
     {
-        Debug.Log("hmmm");
         StartCoroutine(2f.Tweeng((p) => vignette.intensity.value = p, vignette.intensity.value, 0.6f));
         StartCoroutine(2f.Tweeng((p) => vignette.smoothness.value = p, vignette.intensity.value, 0.5f));
         StartCoroutine(2f.Tweeng((p) => channelMixer.redOutRedIn.value = p, channelMixer.redOutRedIn.value, 40f));

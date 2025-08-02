@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Child Room.sln"
+    "dotnet.defaultSolution": "Child-Room-Task.sln"
 }
