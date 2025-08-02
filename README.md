@@ -23,7 +23,7 @@
 
 بعد همین نسخه را رفرنس جدید خودم قرار دادم تا اینکه در نهایت به این نسخه از محیط بازی رسیدم:
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/bd017e99-3ed3-401a-8a8d-ac3f1184c04e" />
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/df78ecfe-b8cf-43bd-ab09-85c582543b96" />
 
 مرحله دوم: تعاملات محیطی
 سپس نوبت به اضافه کردن تعاملات رسید. برای لامپ، امکانی ایجاد کردم که با کلیک روشن و خاموش شود. این کار با فعال و غیرفعال کردن قابلیت Emission در متریال انجام شد.
