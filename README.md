@@ -43,6 +43,20 @@
 https://shortstories-api.onrender.com/
 از UnityWebRequest برای دریافت داده‌ها استفاده کردم و هربار که درخواست میدادم یه فایل JSON رندوم با داده های مختلف میداد، اطلاعات مانند عنوان، نویسنده، متن داستان و نتیجه اخلاقی در متغیرهای محلی ذخیره شده و به UI منتقل می‌شوند. برای جلوگیری از خروج متن از قاب، از Scroll View استفاده کردم.
 
+لیست Asset هایی که دانلود کردم:
+• مدل ۳ بعدی شامل وسایل و دکور اتاق: https://www.cgtrader.com/items/5288476/download-page
+• مدل ۳ بعدی بچه: https://www.cgtrader.com/items/3486580/download-page
+• پکیج Skybox یونیتی: https://assetstore.unity.com/packages/2d/textures-materials/sky/customizable-skybox-174576
+• متریال کف زمین: https://www.reddit.com/r/Unity3D/comments/8bnicr/wood_floor_texture4k/
+• آهنگ های استفاده شده:
+•https://www.chosic.com/download-audio/27307/
+•https://www.chosic.com/download-audio/59085/
+•https://www.chosic.com/download-audio/53611/
+•https://www.chosic.com/download-audio/58989/
+•https://www.chosic.com/download-audio/28514/
+•https://www.chosic.com/download-audio/29437/
+• لینک گیت هاب API مورد استفاده: https://github.com/poseidon-code/shortstories-api
+
 
 راستی! اگر یک مجسمه ته مپ بازی دیدید، اون هم نمونه کار Sculpting من توی Blender هست!
 
